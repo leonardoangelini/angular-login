@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://sharedarea.cloud.gpagroup.it/',
+  tokenName: 'auth-3d5cbc97-4963-4be7-830f-6f92914e283f'
 };
 
 /*
