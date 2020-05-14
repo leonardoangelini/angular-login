@@ -2,7 +2,7 @@ FROM cobaltica/dotnet-sdk-angular:3.1.100 as builder
 
 WORKDIR /src
 COPY . .
-RUN echo "{version:\""$(cat VERSION)"\",build: \""$DEVOPS_BUILDNUM"\",sha:\""$DEVOPS_BUILDSHA"\"}" > version.json
+RUN echo "{version:\""$(cat VERSION)"\",build: \""$DEVOPS_BUILDNUM"\",sha:\""$DEVOPS_GITSHA"\"}" > version.json
 RUN cat version.json
 ## Get packages
 # WORKDIR /ng-app/
