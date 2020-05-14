@@ -1,4 +1,3 @@
-ARG enviroment
 FROM cobaltica/dotnet-sdk-angular:3.1.100 as builder
 
 WORKDIR /src
