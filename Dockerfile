@@ -2,6 +2,10 @@ FROM cobaltica/dotnet-sdk-angular:3.1.100 as builder
 
 WORKDIR /src
 COPY . .
+ARG DEVOPS_BUILDNUM
+ARG DEVOPS_GITSHA
+RUN  echo "Build Num" $DEVOPS_BUILDNUM
+RUN  echo "Git Sha" $DEVOPS_GITSHA
 RUN echo "{version:\""$(cat VERSION)"\",build: \""$DEVOPS_BUILDNUM"\",sha:\""$DEVOPS_GITSHA"\"}" > version.json
 RUN cat version.json
 ## Get packages
