@@ -9,7 +9,7 @@ RUN cat version.json
 RUN npm i
 
 # RUN node --max_old_space_size=8192 ./node_modules/.bin/ng build --prod --c=$enviroment
-RUN ng build --prod --c=$enviroment
+RUN ng build --prod
 FROM nginx:1.17-alpine
 
 # Nginx configuration
